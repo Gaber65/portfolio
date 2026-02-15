@@ -55,41 +55,41 @@ const experiences: Experience[] = [
 
 export function ExperienceSection() {
   return (
-    <section className="py-16 md:py-24 max-w-6xl mx-auto px-4 md:px-8 bg-gradient-to-b from-background to-muted/20">
-      <div className="animate-fade-in mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-secondary">
+    <section className="py-12 sm:py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6 md:px-8 bg-gradient-to-b from-background to-muted/20">
+      <div className="animate-fade-in mb-8 sm:mb-12">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-secondary">
           Experience
         </h2>
-        <div className="w-20 h-1 bg-primary rounded-full animate-slide-in-left"></div>
+        <div className="w-16 sm:w-20 h-1 bg-primary rounded-full animate-slide-in-left"></div>
       </div>
 
-      <div className="space-y-8">
+      <div className="space-y-6 sm:space-y-8">
         {experiences.map((exp, index) => (
           <div 
             key={index} 
-            className="relative border-l-4 border-primary pl-8 pb-8 animate-fade-in-up hover:border-accent transition-colors duration-300 group"
+            className="relative border-l-4 border-primary pl-4 sm:pl-8 pb-6 sm:pb-8 animate-fade-in-up hover:border-accent transition-colors duration-300 group"
             style={{ animationDelay: `${index * 100}ms` }}
           >
             {/* Timeline dot */}
-            <div className="absolute left-0 top-0 w-6 h-6 bg-primary rounded-full -translate-x-4 group-hover:scale-125 transition-transform duration-300 border-4 border-background shadow-lg"></div>
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
-              <div>
-                <h3 className="text-2xl font-semibold text-secondary hover:text-primary transition-colors duration-300">
+            <div className="absolute left-0 top-0 w-5 h-5 sm:w-6 sm:h-6 bg-primary rounded-full -translate-x-3.5 sm:-translate-x-4 group-hover:scale-125 transition-transform duration-300 border-4 border-background shadow-lg"></div>
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 sm:gap-2 mb-2 sm:mb-3">
+              <div className="min-w-0">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-secondary hover:text-primary transition-colors duration-300">
                   {exp.title}
                 </h3>
-                <p className="text-lg font-medium text-primary">{exp.company}</p>
+                <p className="text-base sm:text-lg font-medium text-primary">{exp.company}</p>
               </div>
-              <div className="text-right">
-                <p className="text-sm font-semibold text-muted-foreground">{exp.period}</p>
-                <p className="text-sm text-muted-foreground">{exp.location}</p>
+              <div className="text-left sm:text-right flex-shrink-0">
+                <p className="text-xs sm:text-sm font-semibold text-muted-foreground">{exp.period}</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">{exp.location}</p>
               </div>
             </div>
 
-            <ul className="space-y-3 mt-4">
+            <ul className="space-y-2 sm:space-y-3 mt-3 sm:mt-4">
               {exp.achievements.map((achievement, idx) => (
                 <li 
                   key={idx} 
-                  className="flex gap-3 text-foreground/80 leading-relaxed animate-fade-in-up"
+                  className="flex gap-2 sm:gap-3 text-sm sm:text-base text-foreground/80 leading-relaxed animate-fade-in-up"
                   style={{ animationDelay: `${(index * 100) + (idx * 50)}ms` }}
                 >
                   <span className="text-primary font-bold mt-1 flex-shrink-0">•</span>

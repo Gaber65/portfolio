@@ -179,33 +179,33 @@ const projects: Project[] = [
 
 export function ProjectsSection() {
   return (
-    <section className="py-16 md:py-24 max-w-6xl mx-auto px-4 md:px-8" id="projects">
-      <div className="animate-fade-in mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-secondary">
+    <section className="py-12 sm:py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6 md:px-8" id="projects">
+      <div className="animate-fade-in mb-8 sm:mb-12">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-secondary">
           Featured Projects
         </h2>
-        <div className="w-20 h-1 bg-primary rounded-full animate-slide-in-left"></div>
+        <div className="w-16 sm:w-20 h-1 bg-primary rounded-full animate-slide-in-left"></div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group relative bg-card border border-border rounded-lg p-6 hover:border-primary hover:shadow-xl transition-all duration-300 animate-fade-in-up overflow-hidden"
+            className="group relative bg-card border border-border rounded-lg p-4 sm:p-6 hover:border-primary hover:shadow-xl transition-all duration-300 animate-fade-in-up overflow-hidden"
             style={{ animationDelay: `${index * 50}ms` }}
           >
             {/* Animated background effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
             <div className="relative z-10">
-              <div className="mb-4">
-                <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold mb-3">
+              <div className="mb-3 sm:mb-4">
+                <span className="inline-block px-2.5 sm:px-3 py-0.5 sm:py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold mb-2 sm:mb-3">
                   {project.type}
                 </span>
-                <h3 className="text-xl font-bold text-secondary group-hover:text-primary transition-colors duration-300 mb-2">
+                <h3 className="text-lg sm:text-xl font-bold text-secondary group-hover:text-primary transition-colors duration-300 mb-1 sm:mb-2">
                   {project.name}
                 </h3>
-                <p className="text-sm text-muted-foreground">{project.period}</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">{project.period}</p>
               </div>
 
               <p className="text-sm text-foreground/80 leading-relaxed mb-4 line-clamp-3">
