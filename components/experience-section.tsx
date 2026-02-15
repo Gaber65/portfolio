@@ -55,18 +55,23 @@ const experiences: Experience[] = [
 
 export function ExperienceSection() {
   return (
-    <section className="py-16 md:py-24 max-w-6xl mx-auto px-4 md:px-8">
-      <h2 className="text-4xl md:text-5xl font-bold mb-12 text-secondary animate-fade-in">
-        Experience
-      </h2>
+    <section className="py-16 md:py-24 max-w-6xl mx-auto px-4 md:px-8 bg-gradient-to-b from-background to-muted/20">
+      <div className="animate-fade-in mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-secondary">
+          Experience
+        </h2>
+        <div className="w-20 h-1 bg-primary rounded-full animate-slide-in-left"></div>
+      </div>
 
-      <div className="space-y-12">
+      <div className="space-y-8">
         {experiences.map((exp, index) => (
           <div 
             key={index} 
-            className="border-l-4 border-primary pl-6 pb-8 animate-fade-in-up hover:border-accent transition-colors duration-300"
+            className="relative border-l-4 border-primary pl-8 pb-8 animate-fade-in-up hover:border-accent transition-colors duration-300 group"
             style={{ animationDelay: `${index * 100}ms` }}
           >
+            {/* Timeline dot */}
+            <div className="absolute left-0 top-0 w-6 h-6 bg-primary rounded-full -translate-x-4 group-hover:scale-125 transition-transform duration-300 border-4 border-background shadow-lg"></div>
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
               <div>
                 <h3 className="text-2xl font-semibold text-secondary hover:text-primary transition-colors duration-300">

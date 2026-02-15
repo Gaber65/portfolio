@@ -179,15 +179,15 @@ const projects: Project[] = [
 
 export function ProjectsSection() {
   return (
-    <section className="py-16 md:py-24 max-w-6xl mx-auto px-4 md:px-8">
-      <h2 className="text-4xl md:text-5xl font-bold mb-4 text-secondary animate-fade-in">
-        Featured Projects
-      </h2>
-      <p className="text-lg text-muted-foreground mb-12 animate-fade-in" style={{ animationDelay: '100ms' }}>
-        A selection of my most impactful work spanning mobile, web, and full-stack development
-      </p>
+    <section className="py-16 md:py-24 max-w-6xl mx-auto px-4 md:px-8" id="projects">
+      <div className="animate-fade-in mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-secondary">
+          Featured Projects
+        </h2>
+        <div className="w-20 h-1 bg-primary rounded-full animate-slide-in-left"></div>
+      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {projects.map((project, index) => (
           <div
             key={index}
